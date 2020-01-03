@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+from django import forms
 class Post(models.Model):
 	title =  models.CharField(max_length = 100)
 	content = RichTextUploadingField() # unrestricted text
@@ -15,3 +16,4 @@ class Post(models.Model):
 		
 	def get_absolute_url(self):
 		return reverse('post-detail', kwargs={'pk':self.pk})
+
