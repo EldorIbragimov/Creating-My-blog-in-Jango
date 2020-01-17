@@ -29,7 +29,7 @@
         <!-- Post-->
         {% for obj in object_list %}
         <div class="row d-flex align-items-stretch">
-          {% if not forloop.first and not forloop.last %}
+          {% if not forloop.first and  not forloop.last %}
           <div class="image col-lg-5"><img src="{{ obj.thumbnail.url }}" alt="..."></div>
           {% endif %}
           <div class="text col-lg-7">
@@ -41,9 +41,9 @@
                     <a href="#">{{ cat }}</a>
                     {% endfor %}
                   </div>
-                  <a href="post.html">
+                  <a href="{{ obj.get_absolute_url }}">
                     <h2 class="h4">{{ obj.title }}</h2>
-                    </a>
+                  </a>
                 </header>
                 <p>{{ obj.overview }}</p>
                 <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
@@ -91,7 +91,7 @@
                   <a href="#">{{ cat }}</a>
                   {% endfor %}
                   </div>
-              </div><a href="#">
+              </div><a href="{{ obj.get_absolute_url }}">
                 <h3 class="h4">{{ obj.title }}</h3></a>
               <p class="text-muted">{{ obj.overview }}</p>
             </div>
