@@ -58,13 +58,15 @@ def get_category_count():
 
 class IndexView(View):
     form = EmailSignupForm()
-
+    paginate_by = 4
     def get(self, request, *args, **kwargs):
         featured = Post.objects.filter(featured=True)
-        latest = Post.objects.order_by('-timestamp')[0:3]
+        random = Post.objects.order_by('pub_date')[:3]
+        latest = Post.objects.order_by('?')[0:3]
         context = {
             'object_list': featured,
             'latest': latest,
+            
             'form': self.form
         }
         return render(request, 'index.html', context)
@@ -79,8 +81,8 @@ class IndexView(View):
 
 
 def index(request):
-    featured = Post.objects.filter(featured=True)
-    latest = Post.objects.order_by('-timestamp')[0:3]
+    featured = Post.objects.filter(featured=True)[:3]
+    latest = Post.objects.order_by('?')[0:3]
 
     if request.method == "POST":
         email = request.POST["email"]
