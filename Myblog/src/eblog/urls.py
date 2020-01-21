@@ -11,6 +11,7 @@ from posts.views import (
     post_create,
     post_update,
     post_delete,
+    about,
     IndexView,
     PostListView,
     PostDetailView,
@@ -37,7 +38,8 @@ urlpatterns = [
     # path('post/<id>/delete/', post_delete, name='post-delete'),
     path('post/<pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('tinymce/', include('tinymce.urls')),
-    path('accounts/', include('allauth.urls'))
+    path('accounts/', include('allauth.urls')),
+    path('about/', about, name='about')
 ]
 
 if settings.DEBUG:

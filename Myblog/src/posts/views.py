@@ -60,13 +60,12 @@ class IndexView(View):
     form = EmailSignupForm()
     paginate_by = 4
     def get(self, request, *args, **kwargs):
-        featured = Post.objects.filter(featured=True)
-        random = Post.objects.order_by('pub_date')[:3]
-        latest = Post.objects.order_by('?')[0:3]
+        featured = Post.objects.filter(featured=True)[0:3]
+        random = Post.objects.order_by('?')[:3]
+        latest = Post.objects.order_by('-timestamp')[0:3]
         context = {
-            'object_list': featured,
+            'object_list': random,
             'latest': latest,
-            
             'form': self.form
         }
         return render(request, 'index.html', context)
@@ -289,3 +288,6 @@ def post_delete(request, id):
     post = get_object_or_404(Post, id=id)
     post.delete()
     return redirect(reverse("post-list"))
+
+def about(request):
+    return render(request, "about.html", {})    
