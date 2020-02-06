@@ -1,0 +1,1 @@
+web: gunicorn eldorapp.wsgi --log-file -
