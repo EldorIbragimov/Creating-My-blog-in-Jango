@@ -191,19 +191,17 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-# #django-allauth registraion settings 
+# #django-allauth registraion settings
 # ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS =1
 # ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 4444
-  
-# 1 day 
-ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400 
-  
-#or any other page 
+
+# 1 day
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
+
+#or any other page
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
-  
-# redirects to profile page if not configured. 
+
+# redirects to profile page if not configured.
 LOGIN_REDIRECT_URL = '/'
-
-
