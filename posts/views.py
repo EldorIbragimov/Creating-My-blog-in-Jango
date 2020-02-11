@@ -113,7 +113,7 @@ class PostListView(ListView):
         context['category_count'] = category_count
         context['form'] = self.form
         return context
-    
+
 
 def post_list(request):
     category_count = get_category_count()
