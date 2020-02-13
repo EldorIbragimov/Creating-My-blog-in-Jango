@@ -13,7 +13,7 @@ SECRET_KEY = 'k*b$$!%hiswnhp2pad)6(u4x_g)r5w%@&zlv&@2hrz4#f3+#57'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['127.0.0.1', '134.209.224.211']
+ALLOWED_HOSTS = ['eldor.pythonanywhere.com']
 
 
 # Application definition
@@ -132,7 +132,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/home/eldor/Creating-My-blog-in-Jango/static'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if os.getcwd() == '/app':
@@ -199,6 +199,17 @@ SITE_ID = 1
 # ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 4444
+
+
+# 1 day
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
+
+#or any other page
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+
+# redirects to profile page if not configured.
+LOGIN_REDIRECT_URL = '/'
+
 
 # 1 day
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400
