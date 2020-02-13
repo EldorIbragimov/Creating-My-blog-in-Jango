@@ -183,6 +183,9 @@ MAILCHIMP_DATA_CENTER = ''
 MAILCHIMP_EMAIL_LIST_ID = ''
 
 # Django Allauth
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
