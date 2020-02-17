@@ -688,7 +688,7 @@ section.featured-posts .text-inner {
 }
 
 section.featured-posts a {
-  color: inherit;
+  /* color: inherit; */
   text-decoration: none;
 }
 
