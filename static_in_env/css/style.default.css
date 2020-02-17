@@ -299,7 +299,7 @@ i[class*="icon-"] {
 }
 
 .btn {
-  border-radius: 0 !important;
+  border-radius: 0.5rem !important;
 }
 
 .badge {
@@ -1710,7 +1710,6 @@ STYLE SWITCHER FOR DEMO
   padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.25;
-  border-radius: 0.25rem;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }

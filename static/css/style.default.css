@@ -299,7 +299,7 @@ i[class*="icon-"] {
 }
 
 .btn {
-  border-radius: 0 !important;
+  border-radius: 0.2rem !important;
 }
 
 .badge {
