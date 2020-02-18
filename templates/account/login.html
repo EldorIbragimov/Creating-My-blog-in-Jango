@@ -4,8 +4,6 @@
 {% load account socialaccount %}
 {% load crispy_forms_tags %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
-
 {% block content %}
 <div class="container">
     <div class="row">
@@ -15,7 +13,7 @@
                     <!-- form card login -->
                     <div class="card rounded shadow shadow-sm">
                         <div class="card-header">
-                            <h3 class="mb-0">Login</h3>
+                            <h3 class="mb-0 ">Login</h3>
                         </div>
                         <div class="card-body">
                           <form method="POST" novalidate action="{% url 'account_login' %}" >
