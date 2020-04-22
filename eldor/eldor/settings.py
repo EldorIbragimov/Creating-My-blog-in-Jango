@@ -25,7 +25,7 @@ SECRET_KEY = '4*9urd0gm3hcsm3)g^7t7r8s%!-u87)lxr#fb@e(^r%@_qb!4r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'eldor.pythonanywhere.com']
+ALLOWED_HOSTS = [u'eldor.pythonanywhere.com', u'www.eldor.tech']
 
 
 # Application definition
